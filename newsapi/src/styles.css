@@ -101,3 +101,38 @@ text-decoration: none;
   text-decoration: none;
   color: #000;
 }
+
+.back-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 32px;
+  transform: rotate(90deg);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .6;
+  transition: all.3s ease;
+}
+
+.back-top:hover {
+  opacity: 1;
+  box-shadow: 1px 1px 8px 3px rgba(0, 0, 0, .15);
+}
+
+.back-top span {
+  text-align: center;
+  display: inline;
+  margin-bottom: 5px;
+}
+
+.spinner-block {
+  text-align: center;
+  margin-top: 20px;
+}

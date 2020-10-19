@@ -5,31 +5,10 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Starter Kit</title>
+    <title>News API - Artem Kulyhin</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <style>
-      body {
-        min-height: 100vh;
-        margin: 0;
-      }
 
-      .intro {
-        text-align: center;
-      }
-
-      .intro h1 {
-        margin-top: 0;
-        font-weight: 500;
-        font-size: 40px;
-      }
-
-      .intro img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
   </head>
 
   <body>
@@ -44,10 +23,22 @@
         <div class="articles-block">
           <ul class="articles row justify-content-between"></ul>
           <div class="open-more">
-            <button class="btn btn-primary is-hidden" data-action="open-more">Показать еще</button>
+            <button class="btn btn-primary is-hidden" data-action="open-more">
+              <span class="btnText">Показать еще</span>
+              <span class="btnSpinner spinner-border spinner-border-sm is-hidden" role="status" aria-hidden="true"></span>
+            </button>
           </div>
+          <div class="spinner-block">
+            <div class="spinner-grow text-primary is-hidden" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+        </div>
         </div>
       </div>
     </section>
+
+    <div class="back-top">
+      <span>&lt;</span>
+    </div>
   </body>
 </html>
