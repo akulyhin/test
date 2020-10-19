@@ -6,16 +6,45 @@ console.log(refs.search);
 
 let query = '';
 const apiKey = 'aa8103c96a5c481a951da99868cd8cbc';
+let searchQuery = ''
+let page = 0;
  
 refs.btnSearch.addEventListener('click', () => {
-    console.log(refs.search.value)
+    page = 1;
     query = refs.search.value;
-    const url = `https://newsapi.org/v2/everything?q=${query}&from=2020-09-19&sortBy=publishedAt&apiKey=${apiKey}`;
-    fetch(url).then(res => res.json())
-    .then(data => refs.ulArticles.innerHTML = template(data.articles)
-    );
+    const url = `https://newsapi.org/v2/everything?q=${query}&language=ru&page=${page}`;
+    const options = {
+        headers: {
+            Authorization: apiKey,
+        },
+    }
 
+    refs.ulArticles.innerHTML = '';
+
+    fetch(url, options).then(res => res.json())
+    .then(data =>  {
+        console.log(data),
+        refs.ulArticles.insertAdjacentHTML('beforeend', template(data.articles)),
+    page += 1}
+    );
+    refs.btnMore.classList.remove('is-hidden')
 })
 
 
-// http://newsapi.org/v2/top-headlines?country=us&category=business&
+refs.btnMore.addEventListener('click', () => {
+    const url = `https://newsapi.org/v2/everything?q=${query}&language=ru&page=${page}`;
+    const options = {
+        headers: {
+            Authorization: apiKey,
+        },
+    }
+
+    page = 1;
+
+    fetch(url, options).then(res => res.json())
+    .then(data =>  {
+        console.log(data),
+        refs.ulArticles.insertAdjacentHTML('beforeend', template(data.articles)),
+    page += 1}
+    );
+})

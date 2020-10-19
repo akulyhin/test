@@ -33,14 +33,21 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="search-blcok">
-        <input type="search" name="search" id="searchArticles">
-        <button class="search" type="submit">Искать</button>
+    <section class="news">
+      <div class="container">
+        <form action="#">
+        <div class="search-block">
+          <input type="search" class="form-control search-input" name="search" placeholder="Что ищем?" id="searchArticles">
+          <button class="search btn btn-primary" type="submit">Искать</button>
+        </div>
+      </form>
+        <div class="articles-block">
+          <ul class="articles row justify-content-between"></ul>
+          <div class="open-more">
+            <button class="btn btn-primary is-hidden" data-action="open-more">Показать еще</button>
+          </div>
+        </div>
       </div>
-      <div class="articles-block">
-        <ul class="articles row justify-content-between"></ul>
-      </div>
-    </div>
+    </section>
   </body>
 </html>
