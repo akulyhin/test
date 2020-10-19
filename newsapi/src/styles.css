@@ -6,6 +6,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -17,4 +19,20 @@ body {
    * CSS image reference example.
    */
   background-image: url('./images/bg-pattern.png');
+}
+
+.articles-block {
+  margin-top: 50px;
+}
+
+.article {
+  max-width: 350px;
+  list-style-type: none;
+  border: 1px solid #ddd;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+.image img {
+  max-width: 100%;
 }

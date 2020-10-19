@@ -2,18 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Webpack Starter Kit</title>
 
-    <!-- Don't forget to delete this style tag. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
       body {
         min-height: 100vh;
         margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
 
       .intro {
@@ -35,11 +33,14 @@
   </head>
 
   <body>
-    <article class="intro">
-      <h1>Webpack starter kit</h1>
-
-      <!-- HTML image reference example. -->
-      <img src="./images/intro.png" alt="" width="640" />
-    </article>
+    <div class="container">
+      <div class="search-blcok">
+        <input type="search" name="search" id="searchArticles">
+        <button class="search" type="submit">Искать</button>
+      </div>
+      <div class="articles-block">
+        <ul class="articles row justify-content-between"></ul>
+      </div>
+    </div>
   </body>
 </html>
